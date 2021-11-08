@@ -6,7 +6,7 @@ app.get("/", function (req, res) {
   res.send(
     "<pre>" +
       cowsay.say({
-        text: "Moooh from the cloud!",
+        text: "Mooooh from the cloud!",
         e: "oO",
         T: "U ",
       }) +
