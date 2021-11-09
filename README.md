@@ -26,9 +26,38 @@ Our application is stored on Github. Navigate to the [signup page](https://githu
 
 Now you are ready to get a copy of the source code of our application. You can do that by creating a suitable work directory somewhere on your computer, changing to that directory and then entering the following command:
 
-`git clone git@github.com:bespinian/cowsay-in-the-cloud.git`
+```shell
+git clone git@github.com:bespinian/cowsay-in-the-cloud.git
+```
+
+You should now see a directory `cowsay-in-the-cloud` in your current directory. If you enter that directory you will see all of the code and configuration needed for our little application.
 
 ## Run the application locally
+
+In order to run our application we need to first install all of the libraries which the application needs:
+
+```shell
+npm install
+```
+
+Next we can type the following command to start the application:
+
+```shell
+npm start
+```
+
+Now that the application is running you can go to the browser and navigate to [http://localhost:3000](http://localhost:3000) to see the output. This is what you should be seeing:
+
+```
+ ________________________
+< Mooooh from the cloud! >
+ ------------------------
+        \   ^__^
+         \  (oO)\_______
+            (__)\       )\/\
+             U  ||----w |
+                ||     ||
+```
 
 ## Make some changes
 
