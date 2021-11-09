@@ -14,6 +14,14 @@ In order to obtain the source code of the application and share your changes you
 
 In order to run the application you will need Node.js installed on your computer. You can install it from [this site](https://nodejs.org/en/download/).
 
+### Install `serverless`
+
+For deploying the application to the cloud we will use the `serverless` tool. You can install it by typing:
+
+```shell
+npm install -g serverless
+```
+
 ### Install a good editor
 
 When working with source code and configuration files, a normal text editor like Notepad is too clumsy to work with. Instead, we would like to have an editor which knows the syntax of our programming and configuration languages and can help us when making changes. A good editor to use is [Visual Studio Code](https://code.visualstudio.com/). Maybe you already know another one. Feel free to use it, if it is easier for you!
