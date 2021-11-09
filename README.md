@@ -61,10 +61,68 @@ Now that the application is running you can go to the browser and navigate to [h
 
 ## Make some changes
 
+You can now try to make some changes to the application. For this purpose, you can edit the file `cowsay.js`. Try changing the message which the cow says. You can even change the way the cow looks or select an entirely different animal. Have a look at [the documentation](https://www.npmjs.com/package/cowsay) on how to do this.
+
 ## Bring your application to the cloud
+
+Until now you have executed the application on your own machine. This is great for trying things out when you are making changes. Now, let's have a look how you would deploy the same application the cloud, make it available for others to use and ensure that it will keep working even if thousands of users were to use it at the same time.
 
 ### Get access to the cloud
 
+We will use the `serverless` tool to deploy the application in the cloud. In order for this tool to be able to access the cloud, you need to create some access credential for it. Use the following steps to achieve this:
+
+1. Navigate to [https://aws.amazon.com/console/](https://aws.amazon.com/console/) in the browser.
+2. Press on the Sign In button.
+3. Enter the access credentials you received from your tutor.
+4. Click on your user name in the top right of the screen and then on `My Security Credentials`.
+5. Press the button `Create access key` and download the CSV file.
+6. Go to the shell an set the environment variable `AWS_ACCESS_KEY_ID` to the access key ID.
+7. Set the environment variable `AWS_SECRET_ACCESS_KEY` to the secret key.
+8. Set the environment variable `AWS_REGION` to `eu-central-1`.
+
+Your environment is now set up.
+
 ### Deploy your application
 
+You can now deploy your version of the application with the following command:
+
+```shell
+serverless deploy --stage dev-<your name>
+```
+
+This will set up a new instance of the application named after you. You can also delete your application from the cloud by typing:
+
+```shell
+serverless remove --stage dev-<your name>
+```
+
 ## Push some changes for automatic deployment
+
+We do not want to keep repeating these steps manually every time we have a new version of our application, so there is a pipeline set up in the GitHub repo of the application. When you are ready you can push your change to the repo's `main` branch and watch the pipeline re-deploy the application. First check your changes:
+
+```shell
+git status
+git diff
+```
+
+If you are satisfied, stage your changes:
+
+```shell
+git add .
+```
+
+The commit them:
+
+```shell
+git commit
+```
+
+Then push them to the repo on GitHub:
+
+```shell
+git push
+```
+
+If you navigate to the `actions` tab in GitHub you can see that the pipeline starts running and re-deploys the application with the changes you have just pushed.
+
+Congratulations!
