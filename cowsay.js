@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
   res.send(
     "<pre>" +
       cowsay.say({
-        text: "please reload the site!",
+        text: "please reload the site!j",
         e: "**",
         T: "U",
         r:true
