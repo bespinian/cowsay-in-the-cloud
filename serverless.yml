@@ -1,9 +1,10 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: bespinian
 service: cowsay
-frameworkVersion: "2"
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs20.x
   region: eu-central-1
   lambdaHashingVersion: "20201221"
 
