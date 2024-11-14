@@ -6,11 +6,11 @@ app.get("/", function (req, res) {
   res.send(
     "<pre>" +
       cowsay.say({
-        text: "hallo",
-        e:"oo",
-        T: "#",
+        text: "Hello from the cloud!",
+        e: "--",
+        T: "II",
       }) +
-      "</pre>"
+      "</pre>",
   );
 });
 
