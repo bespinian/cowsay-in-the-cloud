@@ -9,6 +9,7 @@ app.get("/", function (req, res) {
         text: "Hello from the cloud!",
         e: "--",
         T: "II",
+        r: true,
       }) +
       "</pre>",
   );
